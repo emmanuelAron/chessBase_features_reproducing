@@ -173,7 +173,7 @@ display(df_filtered)
 # Conversion to csv:
 df.to_csv("ECO_code_mapping.csv")
 ```
-
+## Machine Learning data preparation
 ```python
 	Result	Moves	white_rating	black_rating
 12	1-0	1. e4 c6 2. d4 d5 3. Nd2 dxe4 4. Nxe4 Nf6 5. N...	2285.0	2405.0
