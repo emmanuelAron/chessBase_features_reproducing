@@ -2,6 +2,8 @@
 
 ![Distribution of game lengths](tableau%20graphs/Distribution_of_game_lengths.png) <br>
 ![Distribution of game results per color](tableau%20graphs/Distribution_of_game_results_by_color.jpg) <br>
+![Distribution of game results for each ECO code](tableau%20graphs/stats_screenshot_lichess1.png) <br>
+
 ```sql
 USE chessdb;
 CREATE TABLE ECO_CODES(
