@@ -251,5 +251,28 @@ except Exception as e:
     print("An error occurred while creating or displaying the image.")
     print(e)
 ```
+Result of my webscraping to csv: <br>
 
+```csv
+code,name
+A01,Larsen's Opening
+A02,Bird's Opening
+A03,"Bird's Opening, 1...d5"
+A04,Zukertort Opening
+A05,"Zukertort Opening, 2...Nf6"
+A06,Réti Opening
+A07,King's Indian attack (Barcza system)
+A08,"King's Indian Attack, 3. Bg2"
+A09,"Réti Opening, without: 2...c6, 2...e6"
+A10,English Opening
+A11,"English, Caro-Kann defensive system"
+A12,"English, Caro-Kann defensive system"
+A13,English Opening
+A14,"English, Neo-Catalan declined"
+A15,"English, 1...Nf6 (Anglo-Indian defense)"
+A16,English Opening
+A17,"English Opening, Hedgehog Defense"
+A18,"English, Mikenas-Carls variation"
+A19,"English, Mikenas-Carls, Sicilian variation"
+```
 
