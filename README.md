@@ -173,3 +173,32 @@ display(df_filtered)
 # Conversion to csv:
 df.to_csv("ECO_code_mapping.csv")
 ```
+
+```python
+	Result	Moves	white_rating	black_rating
+12	1-0	1. e4 c6 2. d4 d5 3. Nd2 dxe4 4. Nxe4 Nf6 5. N...	2285.0	2405.0
+13	0-1	1. e4 e5 2. Nf3 Nc6 3. Bb5 f5 4. Nc3 Nd4 5. Nx...	2285.0	2405.0
+14	0-1	1. a4	2285.0	2405.0
+15	0-1	1. e4 e5 2. Nf3 Nc6 3. Bb5 Nf6 4. d3 Nd4 5. Nx...	2285.0	2405.0
+22	1/2-1/2	1. c4 f5 2. g3 Nf6 3. Bg2 g6 4. Nc3 Bg7 5. e3 ...	2275.0	2255.0
+23	1-0	1. c4 e5 2. Nc3 d6 3. g3 f5 4. Bg2 Nf6 5. e3 B...	2275.0	2255.0
+24	1/2-1/2	1. c4 Nf6 2. Nc3 e6 3. Nf3 c5 4. g3 Nc6 5. Bg2...	2275.0	2255.0
+31	1-0	1. Nf3 Nc6 2. d4 d5 3. c4 Bg4 4. Nc3 dxc4 5. d...	2335.0	2365.0
+32	1-0	1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Qb6 5. ...	2335.0	2365.0
+33	1/2-1/2	1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-...	2335.0	2365.0
+64	0-1	1. Nf3 d5 2. d4 Bg4 3. e3 e6 4. Be2 Nd7 5. O-O...	2245.0	2340.0
+65	1/2-1/2	1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6 5. f3 O...	2245.0	2340.0
+75	0-1	1. c4 Nc6 2. Nc3 e5 3. g3 d6 4. Bg2 Be6 5. d3 ...	2315.0	2235.0
+76	1/2-1/2	1. c4 c6 2. e4 d5 3. exd5 cxd5 4. cxd5 Nf6 5. ...	2315.0	2235.0
+77	1/2-1/2	1. c4 Nf6 2. Nf3 g6 3. Nc3 c5 4. g3 Bg7 5. Bg2...	2315.0	2235.0
+78	1-0	1. e4 e5 2. Nf3 Nc6 3. Bb5 f5 4. d3 fxe4 5. dx...	2315.0	2315.0
+79	0-1	1. e4 e5 2. Nf3 Nc6 3. Bb5 Nf6 4. O-O Bc5 5. N...	2315.0	2315.0
+80	1-0	1. e4 e6 2. d4 d5 3. Nc3 Bb4 4. e5 b6 5. Bd2 Q...	2315.0	2315.0
+81	1/2-1/2	1. d4 e6 2. c4 f5 3. Nc3 Nf6 4. Bf4 Bb4 5. Qb3...	2290.0	2305.0
+82	1/2-1/2	1. d4 Nf6 2. c4 d6 3. Nc3 Bf5 4. Bg5 Nbd7 5. f...	2290.0	2305.0
+16535
+# We add the 'target' column , and remove the 'Result' column :
+df_clean['target'] = df_clean['Result'].apply(lambda x: 1 if x == '1-0' else (0 if x == '1/2-1/2' else -1))
+df_clean = df_clean.drop(columns=['Result'])
+
+```
