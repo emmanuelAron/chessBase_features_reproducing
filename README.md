@@ -165,3 +165,20 @@ SET g.white_rating = t.white_rating,
 COMMIT;
 
 ``` <br>
+
+## Filtering work: <br>
+```sql
+# After inspecting the result, i will try to remove rows that doesn’t start with « 1. » 
+# Problem : it doesnt appear in my DataFrame but it appears in my LibreOffice file...So if it 
+# is not deleted in the table i will try to remove it with SQL.
+ # Step 1: Remove any extraneous whitespace and hidden characters from 'Moves' column
+df['Moves'] = df['Moves'].str.strip()
+
+# Step 2: Filter rows to keep only those starting with "1." in the 'Moves' column
+df_filtered = df[df['Moves'].str.match(r'^1\.\s', na=False)]
+
+# Display the filtered DataFrame
+display(df_filtered)
+# Conversion to csv:
+df.to_csv("ECO_code_mapping.csv")
+```
