@@ -16,17 +16,7 @@ ALTER TABLE ECO_CODES
 ADD COLUMN ECO_ID INT AUTO_INCREMENT PRIMARY KEY;commit;
 
 DROP TABLE GAMES_1990; COMMIT;
-/*
-CREATE TABLE GAMES_1990(
-	White VARCHAR(50),
-    Black VARCHAR(50),
-    Result VARCHAR(7),
-    Event VARCHAR(50),
-    Date DATE,
-    Moves VARCHAR(3000)
-);
-COMMIT;
-*/
+
 CREATE TABLE GAMES_1990(
     id INT PRIMARY KEY AUTO_INCREMENT,
     White VARCHAR(50),
@@ -164,7 +154,7 @@ SET g.white_rating = t.white_rating,
     g.black_rating = t.black_rating;
 COMMIT;
 
-``` <br><br><br>
+``` 
 
 ## Filtering work: <br>
 ```python
