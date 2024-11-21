@@ -202,3 +202,54 @@ df_clean['target'] = df_clean['Result'].apply(lambda x: 1 if x == '1-0' else (0 
 df_clean = df_clean.drop(columns=['Result'])
 
 ```
+
+Exploration of Cairo open-source python library , with svp and matplotlib <br>
+```python
+# Install necessary libraries
+!pip install python-chess cairosvg
+
+# Import libraries
+import chess
+import chess.svg
+import matplotlib.pyplot as plt
+from io import BytesIO
+from PIL import Image
+import cairosvg
+
+# Create the chess board
+board = chess.Board()
+
+# Add moves
+moves = ["d4", "d5", "c4", "e6"]
+for move in moves:
+    board.push_san(move)
+
+# Convert the position to SVG and then to PNG using cairosvg
+try:
+    # Generate the SVG image
+    svg_image = chess.svg.board(board=board)
+    
+    # Convert the SVG image to PNG
+    png_image = BytesIO()
+    cairosvg.svg2png(bytestring=svg_image.encode('utf-8'), write_to=png_image)
+    
+    # Load the PNG image with PIL
+    png_image.seek(0)
+    image = Image.open(png_image)
+
+    # Display the image with Matplotlib
+    plt.figure(figsize=(6, 6))
+    plt.imshow(image)
+    plt.axis('off')  # Hide the axis
+    plt.show()
+
+except OSError as e:
+    print("Error: The 'cairo' library is required to use cairosvg.")
+    print("Make sure 'libcairo' is installed and accessible in the PATH.")
+    print(e)
+except Exception as e:
+    print("An error occurred while creating or displaying the image.")
+    print(e)
+```
+
+
