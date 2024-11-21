@@ -1,6 +1,6 @@
 # chessBase_features_reproducing  <br>
 
-![Distribution of game lengths](tableau graphs/Distribution of game lengths.png) <br>
+![Distribution of game lengths](tableau graphs/Distribution_of_game_lengths.png) <br>
 ![Distribution of game results per color](tableau graphs/Distribution_of_game_results_by_color.jpg) <br>
 ```sql
 USE chessdb;
