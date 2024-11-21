@@ -4,6 +4,7 @@
 ![Distribution of game results per color](tableau%20graphs/Distribution_of_game_results_by_color.jpg) <br>
 ![Distribution of game results for each ECO code](stats_screenshot_lichess1.png) <br>
 
+SQL script <br>
 ```sql
 USE chessdb;
 CREATE TABLE ECO_CODES(
