@@ -203,7 +203,7 @@ df_clean = df_clean.drop(columns=['Result'])
 
 ```
 
-Exploration of Cairo open-source python library , with svp and matplotlib <br>
+Exploration of Cairo open-source python library , with svg and matplotlib <br>
 ```python
 # Install necessary libraries
 !pip install python-chess cairosvg
