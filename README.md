@@ -1,4 +1,4 @@
-# chessBase_features_reproducing  <br>
+# chessBase features reproducing  <br>
 
 ![Distribution of game lengths](tableau%20graphs/Distribution_of_game_lengths.png) <br>
 ![Distribution of game results per color](tableau%20graphs/Distribution_of_game_results_by_color.jpg) <br>
