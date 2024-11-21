@@ -164,10 +164,10 @@ SET g.white_rating = t.white_rating,
     g.black_rating = t.black_rating;
 COMMIT;
 
-``` <br>
+``` <br><br><br>
 
 ## Filtering work: <br>
-```sql
+```
 # After inspecting the result, i will try to remove rows that doesn’t start with « 1. » 
 # Problem : it doesnt appear in my DataFrame but it appears in my LibreOffice file...So if it 
 # is not deleted in the table i will try to remove it with SQL.
